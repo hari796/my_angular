@@ -1,0 +1,44 @@
+<section class="login">
+    <form class="card p-3 shadow bg-dark text-light" [formGroup]="loginForm">
+        <h3 class="text-center text-info">Trace and Track</h3>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    formControlName="email" 
+                    [class.is-invalid]="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+                >
+                <small class="text-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+                    Please enter valid email.
+                </small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    formControlName="password" 
+                    [class.is-invalid]="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+                >
+                <small class="text-danger" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                    Please enter valid password.
+                </small>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline-light w-100" (click)="login()">Login</button>
+            </div>
+            
+            
+        </div>
+    </form>
+    <div class="text-light text-center w-100 py-3 handcraft">
+        <div>
+            {{appVersion}}
+        </div>
+        <div>
+            ~ handcrafted with <i class="bi bi-heart-fill text-info"></i> by {{appAuthor}} ~
+        </div>
+    </div>
+</section>

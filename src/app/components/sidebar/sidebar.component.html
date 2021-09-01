@@ -1,0 +1,10 @@
+<section class="sidebar bg-dark text-light pt-5 shadow">
+    <div *ngFor="let node of nodes" class="row px-3 pt-2">
+        <div class="col-12 col-md-2 text-center px-0" [class.text-info]="isActive(node.urlSlug)" [routerLink]="node.urlSlug">
+            <i [class]="node.iconClass" class="hover-pointer fs-5"></i>
+        </div>
+        <div class="col-md-10 d-none d-md-block" [class.text-info]="isActive(node.urlSlug)" [routerLink]="node.urlSlug">
+            <b class="hover-pointer">{{node.label}}</b>
+        </div>
+    </div>
+</section>

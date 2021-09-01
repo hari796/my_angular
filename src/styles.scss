@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap";
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+// generic styling
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.hover-pointer:hover {
+    cursor: pointer;
+}
+.rounded {
+    border-radius: 1rem !important;
+}
+.rounded-right {
+    border-radius: 0 1rem 1rem 0 !important;
+}
+.rounded-left {
+    border-radius: 1rem 0 0 1rem !important;
+}
+
+
+// theming and overwritten styling
+$backgroundPrimary: #222831;
+$backgroundSecondary: #393e46;
+$foregroundPrimary: #eeeeee;
+$foregroundSecondary: #00adb5;
+
+// custom scrollbar
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2.5px $foregroundPrimary; 
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+    background: $backgroundPrimary; 
+    border-radius: 1rem;
+}
+// end custom scrollbar
+
+.bg-dark {
+    background-color: $backgroundPrimary !important;
+}
+.bg-secondary {
+    background-color: $backgroundSecondary !important;
+}
+.bg-light {
+    background-color: $foregroundPrimary !important;
+}
+
+.text-light {
+    color: $foregroundPrimary !important;
+}
+.text-secondary {
+    color: $foregroundSecondary !important;
+}
+.text-white {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.btn-outline-light {
+    color: $foregroundPrimary !important;
+    border-color: $foregroundPrimary !important;
+}
+
+.btn-outline-light:hover {
+    color: $backgroundPrimary !important;
+    background-color: $foregroundPrimary !important;
+    border-color: $foregroundPrimary !important;
+}
+
+.form-control, .form-select {
+    color: $backgroundSecondary !important;
+    background-color: $foregroundPrimary !important;
+    border-color: $foregroundPrimary !important;
+}
+
+.btn, .card, .form-control, .form-select {
+    border-radius: 1rem;
+}
